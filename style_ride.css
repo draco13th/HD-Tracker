@@ -1,0 +1,8 @@
+body {
+	background-image: url("ride_home.png");
+}
+.home {
+	margin: auto;
+	width: 25%;
+	padding: 50px;
+}
