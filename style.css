@@ -1,8 +1,4 @@
-.home {
-	margin: auto;
-	width: 25%;
-	padding: 50px;
-}
+/*noselect class so that users don't highlight the buttons*/
 .noselect {
 	-webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -10,4 +6,37 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+/*welcome text settings*/
+.welcome_text {
+	margin: auto;
+	width: 50%;
+	padding: 5px;
+	text-align: center;
+}
+/*showcase settings*/
+.showcase {
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+
+
+
+
+
+
+
+/*Whole page settings*/
+hr {
+	display: block;
+	width: 50%;
+	border-style: inset;
+	border-width: 2px;
+}
+a:link {
+	text-decoration: none;
+	color: black;
 }
