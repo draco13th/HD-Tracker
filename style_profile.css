@@ -1,3 +1,8 @@
+
+
+
+/*Whole page classes*/
+
 /*noselect class so that users don't highlight the buttons*/
 .noselect {
 	-webkit-touch-callout: none;
@@ -6,22 +11,4 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-}
-/*info text settings*/
-.welcome_text {
-	margin: auto;
-	width: 50%;
-	text-align: center;
-}
-
-
-
-
-
-/*Whole page settings*/
-hr {
-	display: block;
-	width: 100%;
-	border-style: inset;
-	border-width: 2px;
 }
