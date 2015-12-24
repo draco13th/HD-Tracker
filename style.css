@@ -7,11 +7,10 @@
     -ms-user-select: none;
     user-select: none;
 }
-/*welcome text settings*/
+/*Info text settings*/
 .welcome_text {
 	margin: auto;
 	width: 50%;
-	padding: 5px;
 	text-align: center;
 }
 /*showcase settings*/
@@ -20,7 +19,22 @@
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	
+	padding-bottom: 15px;
+}
+/*ride settings*/
+.ride {
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+/*profile settings*/
+.profile {
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 60px;
 }
 
 
@@ -32,11 +46,7 @@
 /*Whole page settings*/
 hr {
 	display: block;
-	width: 50%;
+	width: 100%;
 	border-style: inset;
 	border-width: 2px;
-}
-a:link {
-	text-decoration: none;
-	color: black;
 }
