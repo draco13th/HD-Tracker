@@ -1,0 +1,19 @@
+<icon gap:platform="blackberry" src="icon.png" />
+<icon gap:platform="blackberry" gap:state="hover" src="icon.png" />
+<icon gap:platform="ios" height="57" src="icon.png" width="57" />
+<icon gap:platform="ios" height="72" src="icon.png" width="72" />
+<icon gap:platform="ios" height="114" src="icon.png" width="114" />
+<icon gap:platform="ios" height="144" src="icon.png" width="144" />
+<icon gap:platform="webos" src="icon.png" />
+<icon gap:platform="winphone" src="icon.png" />
+<icon gap:platform="winphone" gap:role="background" src="icon.png" />
+<gap:splash gap:density="ldpi" gap:platform="android" src="icon.png" />
+<gap:splash gap:density="mdpi" gap:platform="android" src="icon.png" />
+<gap:splash gap:density="hdpi" gap:platform="android" src="icon.png" />
+<gap:splash gap:density="xhdpi" gap:platform="android" src="icon.png" />
+<gap:splash gap:platform="blackberry" src="icon.png" />
+<gap:splash gap:platform="ios" height="480" src="icon.png" width="320" />
+<gap:splash gap:platform="ios" height="960" src="icon.png" width="640" />
+<gap:splash gap:platform="ios" height="1024" src="icon.png" width="768" />
+<gap:splash gap:platform="ios" height="768" src="icon.png" width="1024" />
+<gap:splash gap:platform="winphone" src="icon.png" />
