@@ -1,22 +1,23 @@
 //Variables
 var chrome_points = 0;
-var test_loc = document.getElementById("demo");
 
 //Functions
 function test_chromepoints() {
 	chrome_points = chrome_points + 1;
 }
 
+//Snag the user's location data
 function getLocation() {
 	if (navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(showPosition);
 	} else {
-		test_loc.innerHTML = "Geolocation is not supported by this browser.";
+		document.getElementById("location_data").innerHTML = "Geolocation not supported in this browser :("
 	}
 }
 
+//Display the user's location data
 function showPosition(position) {
-	test_loc.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+	document.getElementById("location_data").innerHTML = "Latitude: " + position.coords.latitude + " | " + "Longitude: " + position.coords.longitude;
 }
 
 //HTML Updates
