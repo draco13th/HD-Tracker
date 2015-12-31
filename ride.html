@@ -4,19 +4,70 @@
 	
 		<title>HD testapp</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--Link to CSS-->
 		<link rel="stylesheet" type="text/css" href="style_ride.css">
+		<!--Link to Google Maps API-->
 		<script src="https://maps.googleapis.com/maps/api/js"></script>
+		<!--Link to Javascript file-->
 		<script src="js.js"></script>
 		
 	</head>
 	
 	<body>
-		
-		<!--Initialize the map, using current location-->
-		<button onclick="getLocation()">Initialize Mapping...</button>
+	
+		<!--Create map-->
+		<script>
+			function initialize() {
+				var mapCanvas = document.getElementById('map');
+				var mapOptions = {
+					center: latlon,
+					zoom: 8,
+					mapTypeId: google.maps.MapTypeId.ROADMAP
+				}
+				var map = new google.maps.Map(mapCanvas, mapOptions);
+			}
+		</script>
+		<!--Add personal position to map-->
+		<script>
+			function getLocation() {
+				if (navigator.geolocation) {
+					navigator.geolocation.getCurrentPosition(createPosition, showError);
+				} else {
+					document.getElementById("error").innerHTML = "Geolocation could not be served by this browser.";
+				}
+			}
+			function createPosition(position) {
+				lat = position.coords.latitude;
+				lon = position.coords.longitude;
+				var latlon = new google.maps.LatLng(lat, lon);
+			}
+			function showError(error) {
+				switch(error.code) {
+					case error.PERMISSION_DENIED:
+						document.getElementById("error").innerHTML = "User denied the request for Geolocation."
+						break;
+					case error.POSITION_UNAVAILABLE:
+						document.getElementById("error").innerHTML = "Location information is unavailable."
+						break;
+					case error.TIMEOUT:
+						document.getElementById("error").innerHTML = "The request to get user location timed out."
+						break;
+					case error.UNKNOWN_ERROR:
+						document.getElementById("error").innerHTML = "An unknown error occurred."
+						break;
+				}
+			}
+		</script>
+	
+		<!--Find me function-->
+		<button onclick="getLocation()">Acquire Geolocation</button>
+		<button onclick="initialize()">Activate Geolocation</button>
 		
 		<!--Where the map will go-->
-		<div id="map" style="width:500px;height:380px;"></div>
+		<div id="map" class="map"></div>
+		
+		<!--Error display-->
+		<p id="error"></p>
 		
 	</body>
 	
