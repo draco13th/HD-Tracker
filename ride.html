@@ -21,11 +21,13 @@
 				if (navigator.geolocation) {
 					navigator.geolocation.getCurrentPosition(successCallBack, errorCallBack);
 				} else {
-					console.log('Geolocation is not supported');
+					document.getElementById('status').innerHTML = "Geolocation failed";
 				}
 			}
 		
-			function errorCallBack() {}
+			function errorCallBack() {
+				document.getElementById('status').innerHTML = "Map failed";
+			}
 		
 			function successCallBack(position) {
 				var myLatLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
@@ -36,6 +38,7 @@
 				}
 				map_container = document.getElementById('map');
 				var map = new google.maps.Map(map_container, map_options);
+				document.getElementById('status').innerHTML = "Map created";
 			}
 		</script>
 		
@@ -44,6 +47,8 @@
 	<body onload="javascript:initGeolocation()">
 
 	<div id="map"></div>
+	
+	<p id="status"></p>
 	
 	</body>
 	
