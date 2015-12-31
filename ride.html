@@ -31,12 +31,15 @@
 		
 			function successCallBack(position) {
 				var myLatLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+				document.getElementById('status').innerHTML = "Coordinates initialized";
 				var map_options = {
 					zoom: 15,
 					center: myLatLng,
 					mapTypeId: google.maps.MapTypeId.ROADMAP
 				}
+				document.getElementById('status').innerHTML = "Map options created";
 				map_container = document.getElementById('map');
+				document.getElementById('status').innerHTML = "Map container created";
 				var map = new google.maps.Map(map_container, map_options);
 				document.getElementById('status').innerHTML = "Map created";
 			}
