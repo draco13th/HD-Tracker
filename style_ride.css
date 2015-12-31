@@ -1,12 +1,7 @@
 /*Whole page classes*/
-
-/*Background image(s)*/
 body {
-	background-image: url("ride_home.png");
-	width: 100%;
-	height:100%;
+	text-align: center;
 }
-
 /*noselect class so that users don't highlight the buttons*/
 .noselect {
 	-webkit-touch-callout: none;
