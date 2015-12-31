@@ -39,7 +39,14 @@
 			function createPosition(position) {
 				lat = position.coords.latitude;
 				lon = position.coords.longitude;
-				var latlon = new google.maps.LatLng(lat, lon);
+				latlon = new google.maps.LatLng(lat, lon);
+				var mapCanvas = document.getElementById('map');
+				var mapOptions = {
+					center: latlon,
+					zoom: 8,
+					mapTypeId: google.maps.MapTypeId.ROADMAP
+				}
+				var map = new google.maps.Map(mapCanvas, mapOptions);
 			}
 			function showError(error) {
 				switch(error.code) {
