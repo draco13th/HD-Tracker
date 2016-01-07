@@ -3,17 +3,12 @@
 	<head>
 	
 		<title>HD testapp</title>
+		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!--Link to CSS-->
 		<link rel="stylesheet" type="text/css" href="style_ride.css">
-		<!--Link to Javascript file
-		<script src="js.js"></script>-->
 		
 		<script src="http://maps.googleapis.com/maps/api/js"></script>
-		
-		<style>
-		#map {width:100%;height:100%;}
-		</style>
 		
 		<script>
 			
@@ -49,7 +44,7 @@
 	
 	<body onload="javascript:initGeolocation()">
 
-	<div id="map"></div>
+	<div id="map" style="height:100%; width:100%;"></div>
 	
 	<p id="status"></p>
 	

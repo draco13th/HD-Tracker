@@ -2,12 +2,3 @@
 body {
 	text-align: center;
 }
-/*noselect class so that users don't highlight the buttons*/
-.noselect {
-	-webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
